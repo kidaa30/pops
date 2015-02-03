@@ -113,9 +113,9 @@ INSTALLED_APPS = (
     'registration',
     'sorl.thumbnail',
     'keyedcache',
-    'livesettings',
+    #'livesettings',
     'l10n',
-    'satchmo_utils.thumbnail',
+    #'satchmo_utils.thumbnail',
     'satchmo_store.contact',
     'tax',
     'tax.modules.no',
@@ -146,7 +146,7 @@ INSTALLED_APPS = (
     #'satchmo_ext.tieredpricing',
     #'debug_toolbar',
     'app_plugins',
-    'simple.localsite',
+    #'simple.localsite',
 )
 
 AUTHENTICATION_BACKENDS = (

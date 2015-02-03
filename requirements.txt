@@ -1,10 +1,12 @@
 django
 http://www.satchmoproject.com/snapshots/trml2pdf-1.2.tar.gz
 PyYAML
+pycrypto
 #reportlab
 south
 sorl-thumbnail
-django-registration
+#django-registration
+django-registration-redux
 django-livesettings
 django-threaded-multihost
 django-caching-app-plugins

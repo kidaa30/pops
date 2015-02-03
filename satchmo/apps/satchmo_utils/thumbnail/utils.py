@@ -1,5 +1,5 @@
 from django.conf import settings
-from django.core.cache import get_cache
+from django.core.cache import caches
 from django.db.models.fields.files import ImageField
 from livesettings import config_value
 from satchmo_utils.thumbnail.text import URLify
@@ -19,9 +19,14 @@ except ImportError:
     from PIL import Image
 
 log = logging.getLogger('satchmo_utils.thumbnail')
+image_cache=None
 
-image_cache = get_cache('locmem:///')
-
+print "sssssss",caches
+try:
+    image_cache = caches['locmem:///']  #get_cache('locmem:///')
+except Exception,e:
+    pass
+    
 _FILE_CACHE_TIMEOUT = 60 * 60 * 60 * 24 * 31 # 1 month
 _THUMBNAIL_GLOB = '%s_t*%s'
 

@@ -6,6 +6,7 @@ class Command(NoArgsCommand):
     help = "Copy the satchmo static directory and files to the local project."
 
     def handle_noargs(self, **options):
+        print "start satchmo copy static"
         import satchmo_store
         static_src = os.path.join(satchmo_store.__path__[0],'../../static')
         # The static dir could be in a different relative location
@@ -21,3 +22,4 @@ class Command(NoArgsCommand):
                 if '.svn' in dirs:
                     shutil.rmtree(os.path.join(root,'.svn'), True)
             print "Copied %s to %s" % (static_src, static_dest)
+        print "complete satchmo_copy_static"
